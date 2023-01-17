@@ -36,3 +36,40 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+const buttons = document.querySelectorAll(".btn")
+
+buttons.forEach(button=> {
+  button.addEventListener("click", function (e) {
+    const x = e.clientX
+    const y = e.clientY
+   
+
+    const buttonTop = e.target.offsetTop
+    const buttonLeft = e.target.offsetLeft
+    
+    const xInside = x - buttonLeft 
+    const yInside = y - buttonTop
+    
+    console.log(xInside, yInside)
+
+    const circle = document.createElement("span")
+    circle.classList.add("circle")
+    circle.style.top = yInside + 'px'
+    circle.style.left = xInside + 'px'
+
+    this.appendChild(circle)
+
+    setTimeout(() => circle.remove(), 500)
+  })
+})
+
+const labels = document.querySelectorAll("contact__form-label")
+
+labels.forEach(label => {
+  label.innerHTML = label.innerText
+    .split('')
+    .map((letter, idx) => `<span>${letter}</span>`)
+    .join('')
+})
+

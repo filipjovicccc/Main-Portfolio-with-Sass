@@ -222,6 +222,7 @@
   }
   &__form-field {
     margin-bottom: 4rem;
+    position: relative;
     @include respond(phone) {
       margin-bottom: 3rem;
     }
@@ -234,6 +235,16 @@
     margin-bottom: 1rem;
     display: block;
     text-align: left;
+    position: absolute;
+    top: 30px;
+    left:0;
+
+    span{
+      display: inline-block;
+      font-size: 18px;
+      min-width: 5px;
+    
+    }
   }
   &__form-input {
     color: #333;
@@ -246,6 +257,11 @@
     border-radius: $commonBorderRadius;
     font-weight: 600;
     /* Code for Modern Browsers */
+     :focus + label span,
+     :valid + label span{
+      color: lightblue;
+      transform: translateY(-30px)
+     }
     &::placeholder {
       color: #999;
       font-weight: 600;
