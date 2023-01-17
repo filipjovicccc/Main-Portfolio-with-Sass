@@ -1,17 +1,3 @@
-/*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
-$breakpoint arguement choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-
-Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only inside media queries
-*/
 *,
 *::after,
 *::before {
@@ -103,7 +89,7 @@ textarea {
     top: calc(100% + 1.5rem);
     height: 5px;
     width: 3rem;
-    background: #0062b9;
+    background: #27614c;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px; }
@@ -147,7 +133,10 @@ textarea {
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform .3s; }
   .btn:hover {
-    transform: translateY(-3px); }
+    transform: translateY(-3px);
+    background-color: #27614c;
+    color: white;
+    border: 1px solid #23d997; }
   .btn--bg {
     padding: 1.5rem 8rem;
     font-size: 2rem; }
@@ -155,12 +144,12 @@ textarea {
     padding: 1.5rem 5rem;
     font-size: 1.6rem; }
   .btn--theme {
-    background: #0062b9;
+    background: #27614c;
     color: #fff; }
   .btn--theme-inv {
-    color: #0062b9;
+    color: #27614c;
     background: #fff;
-    border: 2px solid #0062b9;
+    border: 2px solid #27614c;
     box-shadow: none;
     padding: calc(1.5rem - 2px) calc(5rem - 2px); }
 
@@ -185,7 +174,7 @@ textarea {
 
 .home-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(39, 97, 76, 0.8), rgba(39, 97, 76, 0.8)), url(../../assets/svg/common-bg.svg);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -195,6 +184,9 @@ textarea {
     .home-hero {
       height: unset;
       min-height: unset; } }
+  .home-hero__profile-image {
+    width: 51rem;
+    height: 45rem; }
   .home-hero__socials {
     position: absolute;
     top: 50%;
@@ -256,6 +248,9 @@ textarea {
       .about__content {
         grid-template-columns: 1fr;
         grid-gap: 8rem; } }
+    .about__content__content-image {
+      max-width: 60rem;
+      max-height: 100rem; }
     .about__content-title {
       font-weight: 700;
       font-size: 2.8rem;
@@ -323,7 +318,7 @@ textarea {
           font-size: 1.7rem; } }
 
 .contact {
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(39, 97, 76, 0.8), rgba(39, 97, 76, 0.8)), url(../../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center; }
   .contact__form-container {
@@ -404,7 +399,7 @@ textarea {
 
 .project-cs-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(39, 97, 76, 0.8), rgba(39, 97, 76, 0.8)), url(../../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -515,14 +510,14 @@ textarea {
     color: #333;
     transition: color .3s; }
     .header__logo-container:hover {
-      color: #0062b9; }
+      color: #27614c; }
   .header__logo-img-cont {
     width: 5rem;
     height: 5rem;
     border-radius: 50px;
     overflow: hidden;
     margin-right: 1.5rem;
-    background: #0062b9; }
+    background: #27614c; }
     @media only screen and (max-width: 56.25em) {
       .header__logo-img-cont {
         width: 4.5rem;
@@ -554,7 +549,7 @@ textarea {
     font-weight: 700;
     transition: color .3s; }
     .header__link:hover {
-      color: #0062b9; }
+      color: #27614c; }
     @media only screen and (max-width: 56.25em) {
       .header__link {
         padding: 3rem 1.8rem;
@@ -601,7 +596,7 @@ textarea {
     letter-spacing: 2px;
     transition: color .3s; }
     .header__sm-menu-link a:hover {
-      color: #0062b9; }
+      color: #27614c; }
   .header__sm-menu-link:first-child a {
     border-top: 1px solid #eee; }
   .header__sm-menu-link-last {

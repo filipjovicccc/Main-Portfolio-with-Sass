@@ -18,7 +18,10 @@
     height: unset;
     min-height: unset;
   }
-
+  &__profile-image{
+    width: 51rem;
+    height: 45rem;
+  }
   &__socials {
     position: absolute;
     top: 50%;
@@ -100,6 +103,11 @@
       grid-template-columns: 1fr;
       grid-gap: 8rem;
     }
+    &__content-image{
+      max-width: 60rem;
+      max-height: 100rem;
+    }
+
     &-title {
       font-weight: 700;
       font-size: 2.8rem;
